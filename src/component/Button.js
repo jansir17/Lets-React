@@ -13,9 +13,15 @@ class Button extends React.Component{
 
 
   render(){
-    const {change, locale}= this.props;
+    const {change, locale, show, enable}= this.props;
+    if(!enable) return null;
     return(
-    <button type="button" onClick={()=>change(locale)}>Click Here</button>
+      <>
+          <button type="button" onClick={()=>change(locale)}>
+      {locale==='bn-BD' ? 'Change to English' : 'Change to Bangla'}
+    </button>
+    {show && <p>English P tag</p>}
+      </>
     );
   }
 }
