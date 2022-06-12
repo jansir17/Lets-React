@@ -1,10 +1,7 @@
-import Clocklist from './component/Clocklist';
+import Form from './component/Form';
 
-function App(){
-  let quantites= [1,2,3]
+export default function App(){
   return <div>
-     <Clocklist quantities={quantites}/>
+     <Form />
   </div>
 }
-
-export default App;
