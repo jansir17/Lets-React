@@ -1,7 +1,7 @@
-import Form from './component/Form';
+import Calculator  from './component/Calculator';
 
 export default function App(){
   return <div>
-     <Form />
+     <Calculator  />
   </div>
 }
