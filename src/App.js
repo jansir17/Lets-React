@@ -1,7 +1,14 @@
-import Calculator  from './component/Calculator';
+import Text from "./component/composition/Text";
+import Emoji from "./component/composition/Emoji";
+import Bracket from "./component/composition/Bracket";
 
-export default function App(){
-  return <div>
-     <Calculator  />
-  </div>
+function App(){
+  return <Emoji>
+    {({addEmoji})=> (
+    <Bracket>
+     {({addBracket})=><Text addEmoji={addEmoji} addBracket={addBracket}/>}
+    </Bracket>)}
+    </Emoji>;
 }
+
+export default App;
