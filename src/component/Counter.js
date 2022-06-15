@@ -9,9 +9,9 @@ class Counter extends React.Component{
     this.setState((prevState)=>({count:prevState.count+1}))
   };
   render(){
-    const {renderprop} =this.props;
+    const {children} =this.props;
     const {count}= this.state;
-    return renderprop(count, this.incrementCount)
+    return children(count, this.incrementCount)
   }
 }
 

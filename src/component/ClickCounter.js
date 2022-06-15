@@ -1,7 +1,7 @@
-export default function ClickCounter ({countbal, incrementCount}){
+export default function ClickCounter ({count, incrementCount}){
         return (
       <div>
-        <button type="button" onClick={incrementCount}>Click {countbal} Times</button>
+        <button type="button" onClick={incrementCount}>Click {count} Times</button>
       </div>
     );
 
